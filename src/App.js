@@ -14,9 +14,9 @@ function App() {
 
   useEffect(() => {
   
-    axios.get('GET https://api.nasa.gov/planetary/apod?api_key=Hu6MRWbnJ9Z6vRKWgagecXYGqfllCpI1jnBHfQZ4&date=2012-03-14 ')
+    axios.get('https://api.nasa.gov/planetary/apod?api_key=Hu6MRWbnJ9Z6vRKWgagecXYGqfllCpI1jnBHfQZ4&date=2012-03-14 ')
       .then( element => {
-        setNasa(element)
+        setNasa(element.data)
         console.log('element', element)
               
       });
@@ -37,7 +37,7 @@ function App() {
         />
 
         <Cardinfo 
-          imgurl = {nasa.url }
+          imgurl = {nasa.url}
           blurb = {nasa.explanation}
         />
         
