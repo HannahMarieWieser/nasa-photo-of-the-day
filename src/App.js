@@ -10,17 +10,23 @@ import Cardinfo from "./components/card/daycard";
 import Homelink from './components/card/Homelink'
 import styled from 'styled-components'
 
-
+const Pagebackground = styled.div`
+  background-color: #e6f7ff;
+`
 
 const Daycarddiv = styled.div`
-  color : #800000;
-`;
+  color : #00344d0;
+  
+`
+
 
 const Cardbox = styled.div`
   width: 700px;
   height: 100%;
   border: 2px black solid;
   margin: auto;
+  background-color :white;
+ 
 `;
 
 function App() {
@@ -42,37 +48,42 @@ function App() {
   }, []);
 
   return (
-
-    <Cardbox>
-      <div className="App">
-        <p>
+    <Pagebackground>
 
 
-        <Daycarddiv>
-            <Header 
-              title ={nasa.title}
-              date = {nasa.date}
-              author = {nasa.copyright}
+      <Cardbox>
+        <div className="App">
+          <p>
+
+
+            <Daycarddiv>
+              <Header 
+                title ={nasa.title}
+                date = {nasa.date}
+                author = {nasa.copyright}
+              />
+            </Daycarddiv>
+
+
+            
+            <Cardinfo
+              imgurl = {nasa.url}
+              blurb = {nasa.explanation}
             />
-          </Daycarddiv>
+            
+            
+            <Homelink >
+              <a href="https://www.nasa.gov/" > NASA Home </a>
+            </Homelink>
+            
+            
+          </p>
+        </div>
+      </Cardbox>
 
 
-          
-          <Cardinfo
-            imgurl = {nasa.url}
-            blurb = {nasa.explanation}
-          />
-          
-          
-          <Homelink >
-            <a href="https://www.nasa.gov/" > NASA Home </a>
-          </Homelink>
-          
-          
-        </p>
-      </div>
-    </Cardbox>
 
+    </Pagebackground>
   );
 }
 
