@@ -19,7 +19,7 @@ Commit your code regularly and meaningfully. This helps both you and your team l
 
 This homework is a continuation of the work you have done previously.
 
-- [ ] CD into your old project
+- [x] CD into your old project
 - [ ] Continue to make changes and push to the same branch
 
 
