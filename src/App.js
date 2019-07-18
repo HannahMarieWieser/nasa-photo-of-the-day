@@ -5,19 +5,22 @@ import "./App.css";
 
 import Header from "./components/card/header";
 import Cardinfo from "./components/card/daycard";
-import styled from 'styled-components'
+
 
 import Homelink from './components/card/Homelink'
+import styled from 'styled-components'
+
 
 
 const Daycarddiv = styled.div`
-  color : red;
+  color : #800000;
 `;
 
 const Cardbox = styled.div`
-  width: 500px;
-  height: 700px;
-  border: 1px black solid;
+  width: 700px;
+  height: 100%;
+  border: 2px black solid;
+  margin: auto;
 `;
 
 function App() {
@@ -54,13 +57,16 @@ function App() {
           </Daycarddiv>
 
 
-
+          
           <Cardinfo
             imgurl = {nasa.url}
             blurb = {nasa.explanation}
           />
           
-          <Homelink type='home'> Home </Homelink>
+          
+          <Homelink >
+            <a href="https://www.nasa.gov/" > NASA Home </a>
+          </Homelink>
           
           
         </p>

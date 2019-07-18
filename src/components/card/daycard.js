@@ -1,11 +1,19 @@
 import React from "react";
+import styled from 'styled-components';
+import { Image, Container } from 'semantic-ui-react'
+
+
+
+
 
 const Cardinfo = ({imgurl, blurb}) => {
   return (
     <>
       {/* display h1 title*/}
-      <img src={imgurl} alt="alttext" />;
-      <p> {blurb} </p>
+      <Image src={imgurl} alt="alttext" />
+      <Container>
+        <p> {blurb} </p>
+      </Container> 
     </>
   );
 };
