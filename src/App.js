@@ -5,8 +5,20 @@ import "./App.css";
 
 import Header from "./components/card/header";
 import Cardinfo from "./components/card/daycard";
+import styled from 'styled-components'
+
+import Homelink from './components/card/Homelink'
 
 
+const Daycarddiv = styled.div`
+  color : red;
+`;
+
+const Cardbox = styled.div`
+  width: 500px;
+  height: 700px;
+  border: 1px black solid;
+`;
 
 function App() {
 
@@ -27,22 +39,34 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <p>
-       
-       <Header 
-          title ={nasa.title}
-          date = {nasa.date}
-          author = {nasa.copyright}
-        />
 
-        <Cardinfo 
-          imgurl = {nasa.url}
-          blurb = {nasa.explanation}
-        />
-        
-      </p>
-    </div>
+    <Cardbox>
+      <div className="App">
+        <p>
+
+
+        <Daycarddiv>
+            <Header 
+              title ={nasa.title}
+              date = {nasa.date}
+              author = {nasa.copyright}
+            />
+          </Daycarddiv>
+
+
+
+          <Cardinfo
+            imgurl = {nasa.url}
+            blurb = {nasa.explanation}
+          />
+          
+          <Homelink type='home'> Home </Homelink>
+          
+          
+        </p>
+      </div>
+    </Cardbox>
+
   );
 }
 
